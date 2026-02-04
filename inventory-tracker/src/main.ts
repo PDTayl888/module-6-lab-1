@@ -1,5 +1,6 @@
 import { DigitalProduct } from './models/DigitalProduct.js';
 import { PhysicalProduct } from './models/PhysicalProduct.js';
+import { calculateTax } from './utils/taxCalculator.js'
 
 
 const products = [
@@ -19,5 +20,13 @@ for (const product of products) {
     console.log("PRODUCT DETAILS:");
     console.log(product.displayDetails());
 
-    
+    if (product instanceof PhysicalProduct) {
+        console.log("WEIGHT:");
+        console.log(product.formattedWeight);
+    } else if ( product instanceof DigitalProduct) {
+        console.log("SIZE:");
+        console.log(product.formattedSize);
+    }
+
+    const priceWithTax = calculateTax()
 }
