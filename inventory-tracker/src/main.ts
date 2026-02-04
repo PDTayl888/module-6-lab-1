@@ -28,5 +28,8 @@ for (const product of products) {
         console.log(product.formattedSize);
     }
 
-    const priceWithTax = calculateTax()
+    const priceWithTax = calculateTax(product);
+    console.log("PRICE WITH TAX:");
+    console.log(priceWithTax);
+    console.log("-* *- -* *- -* *- -* *- -* *- -* *- -* *- -* *-")
 }
