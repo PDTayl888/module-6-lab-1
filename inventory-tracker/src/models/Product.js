@@ -8,7 +8,7 @@ export class Product {
         this.price = price;
     }
     displayDetails() {
-        return `${this.sku} - ${this.name}: $${this.price.toFixed(2)}`;
+        return `   SKU: ${this.sku} - ${this.name}: $${this.price.toFixed(2)}`;
     }
 }
 //# sourceMappingURL=Product.js.map

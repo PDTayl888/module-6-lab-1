@@ -8,7 +8,7 @@ export abstract class Product {
     }
 
     displayDetails(): string {
-        return `${this.sku} - ${this.name}: $${this.price.toFixed(2)}`;
+        return `   SKU: ${this.sku} - ${this.name}: $${this.price.toFixed(2)}`;
     }
 
     abstract getPriceWithTax(): number;
